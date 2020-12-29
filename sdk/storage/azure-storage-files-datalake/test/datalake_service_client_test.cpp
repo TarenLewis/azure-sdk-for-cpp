@@ -7,7 +7,7 @@
 
 namespace Azure { namespace Storage { namespace Test {
 
-  const size_t c_FILE_SYSTEM_TEST_SIZE = 5;
+  const size_t FILE_SYSTEM_TEST_SIZE = 5;
 
   std::shared_ptr<Files::DataLake::DataLakeServiceClient>
       DataLakeServiceClientTest::m_dataLakeServiceClient;
@@ -25,7 +25,7 @@ namespace Azure { namespace Storage { namespace Test {
     m_fileSystemPrefixB = LowercaseRandomString(10);
     m_fileSystemNameSetA.clear();
     m_fileSystemNameSetB.clear();
-    for (size_t i = 0; i < c_FILE_SYSTEM_TEST_SIZE; ++i)
+    for (size_t i = 0; i < FILE_SYSTEM_TEST_SIZE; ++i)
     {
       {
         auto name = m_fileSystemPrefixA + LowercaseRandomString(10);

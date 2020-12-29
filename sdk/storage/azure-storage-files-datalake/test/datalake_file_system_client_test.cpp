@@ -9,7 +9,7 @@
 
 namespace Azure { namespace Storage { namespace Test {
 
-  const size_t c_PATH_TEST_SIZE = 5;
+  const size_t PATH_TEST_SIZE = 5;
 
   std::shared_ptr<Files::DataLake::FileSystemClient>
       DataLakeFileSystemClientTest::m_fileSystemClient;
@@ -32,7 +32,7 @@ namespace Azure { namespace Storage { namespace Test {
     m_directoryB = LowercaseRandomString();
     m_pathNameSetA.clear();
     m_pathNameSetB.clear();
-    for (size_t i = 0; i < c_PATH_TEST_SIZE; ++i)
+    for (size_t i = 0; i < PATH_TEST_SIZE; ++i)
     {
       {
         auto name = m_directoryA + "/" + LowercaseRandomString();

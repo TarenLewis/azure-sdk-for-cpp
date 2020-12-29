@@ -24,10 +24,10 @@ namespace Azure { namespace Storage { namespace Files { namespace DataLake {
     {
       int64_t offset = std::numeric_limits<int64_t>::max();
       int64_t length = std::numeric_limits<int64_t>::max();
-      const std::string c_bytesPrefix = "bytes ";
-      if (rangeString.length() > c_bytesPrefix.length())
+      const std::string bytesPrefix = "bytes ";
+      if (rangeString.length() > bytesPrefix.length())
       {
-        auto subRangeString = rangeString.substr(c_bytesPrefix.length());
+        auto subRangeString = rangeString.substr(bytesPrefix.length());
         std::string::const_iterator cur = subRangeString.begin();
         offset = std::stoll(Details::GetSubstringTillDelimiter('-', subRangeString, cur));
         if (cur != subRangeString.end())

@@ -258,7 +258,7 @@ namespace Azure { namespace Core { namespace Http {
      * provide their own buffer to copy from socket when reading the HTTP body using streams.
      *
      */
-    uint8_t m_readBuffer[Details::c_DefaultLibcurlReaderSize]; // to work with libcurl custom read.
+    uint8_t m_readBuffer[Details::DefaultLibcurlReaderSize]; // to work with libcurl custom read.
 
     /**
      * @brief Function used when working with Streams to manually write from the HTTP Request to
@@ -341,7 +341,7 @@ namespace Azure { namespace Core { namespace Http {
         : m_connection(std::move(connection)), m_request(request), m_keepAlive(keepAlive)
     {
       m_bodyStartInBuffer = -1;
-      m_innerBufferSize = Details::c_DefaultLibcurlReaderSize;
+      m_innerBufferSize = Details::DefaultLibcurlReaderSize;
       m_isChunkedResponseType = false;
       m_sessionTotalRead = 0;
     }
